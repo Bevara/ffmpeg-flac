@@ -6,21 +6,21 @@ include(filters.cmake)
 add_definitions(-fpic)
 
 SET(FF_SRC_FLAC
-        ${CMAKE_SOURCE_DIR}/ff_dec-flac.c
-        ${CMAKE_SOURCE_DIR}/ff_common.c
-        ${CMAKE_SOURCE_DIR}/reframe_flac.c
-        ${CMAKE_SOURCE_DIR}/bitstream.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/ff_dec-flac.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/ff_common.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/reframe_flac.c
+        ${CMAKE_CURRENT_SOURCE_DIR}/bitstream.c
 )
 
 SET(FF_LIB_FLAC
-        ${CMAKE_SOURCE_DIR}/lib/libavcodec.a
-        ${CMAKE_SOURCE_DIR}/lib/libavutil.a
-        ${CMAKE_SOURCE_DIR}/lib/libavformat.a
-        ${CMAKE_SOURCE_DIR}/lib/libavfilter.a
+        ${CMAKE_CURRENT_SOURCE_DIR}/lib/libavcodec.a
+        ${CMAKE_CURRENT_SOURCE_DIR}/lib/libavutil.a
+        ${CMAKE_CURRENT_SOURCE_DIR}/lib/libavformat.a
+        ${CMAKE_CURRENT_SOURCE_DIR}/lib/libavfilter.a
 )
 
 SET(FF_INCLUDE_FLAC
-        ${CMAKE_SOURCE_DIR}/include
+        ${CMAKE_CURRENT_SOURCE_DIR}/include
 )
 
 add_filter(ffmpeg-flac
