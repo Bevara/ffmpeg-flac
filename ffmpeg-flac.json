@@ -10,5 +10,7 @@
     "filter_source":{
         "rfflac" : "reframe_flac.c",
         "ffdec-flac" : "ff_dec-flac.c"
-    }
+    },
+    "Format": ["FLAC"],
+    "licence_required":false
 }
