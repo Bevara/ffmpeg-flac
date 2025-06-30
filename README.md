@@ -39,7 +39,7 @@ emcmake cmake .
 emmake make
 ```
 
-Once built, you can use and distribute vorbis_1.wasm with your universal tags.
+Once built, you can use and distribute ffmpeg-flac_1.wasm with your universal tags.
 
 ## Documentation
 
