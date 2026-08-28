@@ -26,6 +26,7 @@
 #include <gpac/avparse.h>
 #include <gpac/constants.h>
 #include <gpac/filters.h>
+#include "filter_register.h"
 
 #ifndef GPAC_DISABLE_RFFLAC
 typedef struct
@@ -873,9 +874,13 @@ const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE dynCall_flac_dmx_register(GF_Filt
 	return &FLACDmxRegister;
 }
 #else
-const GF_FilterRegister *rfflac_register(GF_FilterSession *session)
+const GF_FilterRegister *dynCall_flac_dmx_register(GF_FilterSession *session)
 {
 	return NULL;
 }
 #endif // GPAC_DISABLE_RFFLAC
 
+__attribute__((constructor))
+void register_flac_dmx_register(void) {
+    gf_filter_auto_register("flac_dmx", dynCall_flac_dmx_register);
+}
