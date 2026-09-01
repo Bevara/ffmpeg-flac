@@ -859,7 +859,7 @@ GF_FilterRegister FLACDmxRegister = {
 };
 
 
-const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE dynCall_flac_dmx_register(GF_FilterSession *session)
+const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE flac_dmx_register(GF_FilterSession *session)
 {
 
 #ifdef GPAC_ENABLE_COVERAGE
@@ -874,7 +874,7 @@ const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE dynCall_flac_dmx_register(GF_Filt
 	return &FLACDmxRegister;
 }
 #else
-const GF_FilterRegister *dynCall_flac_dmx_register(GF_FilterSession *session)
+const GF_FilterRegister *flac_dmx_register(GF_FilterSession *session)
 {
 	return NULL;
 }
@@ -882,5 +882,5 @@ const GF_FilterRegister *dynCall_flac_dmx_register(GF_FilterSession *session)
 
 __attribute__((constructor))
 void register_flac_dmx_register(void) {
-    gf_filter_auto_register("flac_dmx", dynCall_flac_dmx_register);
+    gf_filter_auto_register("flac_dmx", flac_dmx_register);
 }

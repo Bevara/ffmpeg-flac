@@ -1515,7 +1515,7 @@ const int FFDEC_STATIC_ARGS = (sizeof (FFDecodeArgs) / sizeof (GF_FilterArgs)) -
 
 #include "filter_register.h"
 
-const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE dynCall_ffdec_flac_register(GF_FilterSession *session)
+const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE ffdec_flac_register(GF_FilterSession *session)
 {
 	return ffmpeg_build_register(session, &FFDecodeRegister, FFDecodeArgs, FFDEC_STATIC_ARGS, FF_REG_TYPE_DECODE);
 }
@@ -1523,7 +1523,7 @@ const GF_FilterRegister * EMSCRIPTEN_KEEPALIVE dynCall_ffdec_flac_register(GF_Fi
 #else
 #include <gpac/filters.h>
 #include "filter_register.h"
-const GF_FilterRegister *dynCall_ffdec_flac_register(GF_FilterSession *session)
+const GF_FilterRegister *ffdec_flac_register(GF_FilterSession *session)
 {
 	return NULL;
 }
@@ -1531,5 +1531,5 @@ const GF_FilterRegister *dynCall_ffdec_flac_register(GF_FilterSession *session)
 
 __attribute__((constructor))
 void register_this_side_module(void) {
-    gf_filter_auto_register("ffdec_flac", dynCall_ffdec_flac_register);
+    gf_filter_auto_register("ffdec_flac", ffdec_flac_register);
 }
