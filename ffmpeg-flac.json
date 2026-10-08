@@ -12,5 +12,6 @@
         "ffdec-flac" : "ff_dec-flac.c"
     },
     "Format": ["FLAC"],
-    "licence_required":false
+    "licence_required":false,
+    "using": ["solver_1"]
 }
