@@ -1,6 +1,6 @@
 {
     "name": "ffmpeg-flac",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "description": "ffmpeg flac decoder",
     "filters":["rfflac","ffdec-flac"],
     "help": "This is a reduced version of ffmpeg adapted to decode flac content.",
@@ -13,7 +13,7 @@
         "ffdec-flac" : "ff_dec-flac.c"
     },
     "Format": ["FLAC"],
-    "using": ["solver_1"],
+    "using": ["mm_solver_1.0.1"],
     "runtime": {
         "ffdec-flac": {
             "outputs": [
