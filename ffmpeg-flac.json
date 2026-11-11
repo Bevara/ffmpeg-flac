@@ -2,18 +2,29 @@
     "name": "ffmpeg-flac",
     "version": "1.0.2",
     "description": "ffmpeg flac decoder",
-    "filters":["rfflac","ffdec-flac"],
+    "filters": [
+        "rfflac",
+        "ffdec-flac"
+    ],
     "help": "This is a reduced version of ffmpeg adapted to decode flac content.",
     "support": [
         "audio"
     ],
-    "sources":"https://bevara.ddns.net/sources/ffmpeg-flac.accessor",
-    "filter_source":{
-        "rfflac" : "reframe_flac.c",
-        "ffdec-flac" : "ff_dec-flac.c"
+    "sources": "https://bevara.ddns.net/sources/ffmpeg-flac.accessor",
+    "filter_source": {
+        "rfflac": "reframe_flac.c",
+        "ffdec-flac": "ff_dec-flac.c"
     },
-    "Format": ["FLAC"],
-    "using": ["mm_solver_1.0.1", "mm_solver_1.0.2", "mm_solver_1.0.3", "mm_solver_1.0.4"],
+    "Format": [
+        "FLAC"
+    ],
+    "using": [
+        "mm_solver_1.0.1",
+        "mm_solver_1.0.2",
+        "mm_solver_1.0.3",
+        "mm_solver_1.0.4",
+        "mm_solver_1.0.5"
+    ],
     "runtime": {
         "ffdec-flac": {
             "outputs": [
